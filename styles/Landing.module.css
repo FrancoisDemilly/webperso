@@ -1,0 +1,245 @@
+/*
+light Green: #06F0B8 
+dark Green: #08A37F
+
+red orange : #FF2923 
+darker orange: #E64420
+*/
+
+/**************************************************************/
+/*
+@media screen and (max-width: 768px) {
+  .container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .imgContainer {
+    box-shadow: 20px 20px #e0e242;
+    width: 200px;
+    height: 245px;
+    margin-left: -50px;
+  }
+
+  .imgContainer::after {
+    background-image: url("../public/images/texture.svg");
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 225px;
+    width: 100vw;
+    left: 0px;
+    margin-top: 20px;
+    z-index: -1;
+  }
+
+  .titleContainer {
+    width: 80vw;
+    height: auto;
+    padding: 0;
+    margin: 0 0 0 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .h1first {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 2em;
+    letter-spacing: -0.1em;
+    font-weight: 550;
+  }
+
+  .h1last {
+    padding: 0;
+    margin: 0 0 0 4vw;
+    text-transform: uppercase;
+    color: #ff0000;
+    font-size: 2.1em;
+    letter-spacing: -0.1em;
+    font-weight: 700;
+  }
+
+  .h3 {
+    padding: 0;
+    margin: 0 0 0 14vw;
+    text-transform: lowercase;
+    color: #333;
+    font-size: 1.9em;
+    letter-spacing: -0.05em;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .test {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .testImage {
+    z-index: -1;
+  }
+
+  .container {
+    position: relative;
+    height: 70vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    clip-path: polygon(0 0, 70% 0, 100% 20%, 100% 100%, 0 100%);
+    z-index: -100;
+  }
+
+  .container::after {
+    content: "";
+    position: absolute;
+    height: 70vh;
+    width: 70vw;
+    background-color: #f6f6f6;
+    clip-path: polygon(0 0, 70% 0, 100% 20%, 100% 100%, 0 100%);
+    z-index: -10;
+  }
+
+  .imgContainer {
+    box-shadow: 20px 20px #e0e242;
+    width: 200px;
+    height: 245px;
+  }
+
+  .imgContainer::after {
+    background-image: url("../public/images/textureDark.svg");
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 225px;
+    width: 30vw; 
+    left: 25px;
+    margin-top: 20px;
+    z-index: -1;
+  }
+
+  .titleContainer {
+    width: 300px;
+    height: auto;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+ 
+
+  .h1first {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 4em;
+    letter-spacing: -0.1em;
+    font-weight: 500;
+  }
+
+  .h1last {
+    padding: 0;
+    margin: 0 0 0 25px;
+    text-transform: uppercase;
+    color: #ff0000;
+    font-size: 4em;
+    letter-spacing: -0.1em;
+    font-weight: 700;
+  }
+
+  .h3 {
+    padding: 0;
+    margin: 0 0 0 50px;
+    text-transform: lowercase;
+    color: #fff;
+    font-size: 3.8em;
+    letter-spacing: -0.05em;
+    font-weight: 400;
+  }
+}
+
+*/
+
+/*pieces above will be used for About page*/
+/*********New Landing page************/
+
+.test {
+  height: 100vh;
+  width: 100%;
+  background-color: burlywood;
+  overflow: hidden;
+  z-index: -4;
+}
+
+.bgWrap {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.titleContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.h1first {
+  width: auto;
+  padding: 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 4em;
+  letter-spacing: -0.1em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.h1last {
+  padding: 0 10px;
+  letter-spacing: -0.1em;
+  color: #ff0000;
+  font-weight: 700;
+}
+
+.h3 {
+  width: 100vw;
+  padding: 0 10px;
+  margin: 0;
+  text-transform: lowercase;
+  color: #fff;
+  font-size: 3em;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .h1first {
+    font-size: 2.5em;
+  }
+
+  .h3 {
+    font-size: 2em;
+  }
+}

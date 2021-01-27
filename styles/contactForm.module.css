@@ -1,0 +1,93 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 45vh;
+}
+
+.inputBox {
+  border-radius: 0px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 70vw;
+  border: 0.25px solid #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styling textarea*/
+.comment {
+  height: 20vh;
+}
+.contactButton {
+  text-transform: uppercase;
+  width: 70vw;
+  height: 40px;
+  background-color: #e0e242;
+  border: none;
+}
+
+.text {
+  text-align: center;
+}
+
+/*styling thank you message*/
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 45vh;
+}
+
+.description {
+  position: relative;
+  height: 100px;
+  width: inherit;
+  text-align: center;
+  text-justify: inter-word;
+  margin-top: 12vh;
+  border: 0.5px solid #333;
+  border-radius: 0px;
+}
+
+.description > p {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #333;
+  line-height: 3em;
+}
+
+.iconClose {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+@media screen and (max-width: 499px) {
+  .message {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 45vh;
+  }
+
+  .description {
+    position: relative;
+    height: 100px;
+    width: inherit;
+    text-align: center;
+    text-justify: inter-word;
+    margin-top: 6vh;
+    border: 0.5px solid #333;
+    border-radius: 0px;
+  }
+
+  .description > p {
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+    margin-top: 50px;
+    line-height: 1em;
+    padding: 0 10px;
+  }
+}

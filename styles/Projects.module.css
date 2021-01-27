@@ -1,0 +1,200 @@
+.container {
+  overflow-x: hidden;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding-top: 35px;
+  padding-bottom: 100px;
+  z-index: -10;
+}
+
+.project {
+  width: 80vw;
+  margin: 25px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.project:nth-child(2n + 1) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.title {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  color: #333;
+  text-transform: uppercase;
+  margin-top: 40px;
+  font-size: 1.5em;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  background-color: #ff0000;
+  width: 100px;
+  height: 3px;
+  left: -15px;
+  top: -5px;
+}
+.test {
+  z-index: -1;
+}
+.pictureHolder {
+  position: relative;
+  width: 30vw;
+  height: 30vw;
+  margin-left: 2%;
+  box-shadow: -40px 15px #ff6e6e;
+}
+
+.project:nth-child(2n + 1) > .pictureHolder {
+  margin-left: 0;
+  margin-right: 2%;
+  box-shadow: 40px 15px #ff6e6e;
+}
+
+.descripCont {
+  width: 50vw;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleDes {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+}
+
+.technoDes {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: #333;
+  font-weight: 500;
+  padding: 0;
+  margin: 0 0 0 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.description {
+  width: 30vw;
+  font-size: 1.1em;
+  color: #777;
+  line-height: 1.5rem;
+  text-align: left;
+  text-justify: inter-word;
+  padding: 0 15px;
+}
+
+.projbutton,
+.projbuttonD {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  /* create a small space when buttons wrap on 2 lines */
+  margin: 20px 5px 20px 5px;
+
+  /* invisible border (will be colored on hover/focus) */
+  border: solid 1px transparent;
+  border-radius: 0px;
+
+  /* size comes from text & padding (no width/height) */
+  padding: 0.5em 1em;
+
+  /* make sure colors have enough contrast! */
+  color: #333;
+  background-color: #e1c7eb;
+}
+
+.projbuttonD {
+  color: #333;
+  background-color: #e0e242;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project:nth-child(2n + 1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pictureHolder {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: -15px 7px #ff6e6e;
+  }
+
+  .project:nth-child(2n + 1) > .pictureHolder {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: 15px 7px #ff6e6e;
+  }
+
+  .descripCont {
+    width: 80vw;
+    padding: 0;
+    margin: 4vh 0 2vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    width: 60vw;
+    line-height: 1.5rem;
+  }
+
+  .projbutton,
+  .projbuttonD {
+    margin: 20px 5px 20px 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .description {
+    width: 70vw;
+  }
+
+  .pictureHolder {
+    position: relative;
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .project:nth-child(2n + 1) > .pictureHolder {
+    position: relative;
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .projbutton,
+  .projbuttonD {
+    margin: 5px 5px 20px 5px;
+  }
+}
