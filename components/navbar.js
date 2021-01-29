@@ -33,7 +33,7 @@ export default function Navbar() {
             <a href="#projects" onClick={handleMenu}>Projets</a>
         </li>
         <li className={`${styles.listItem} ${styles.navText}`}>
-            <a href="#skills" onClick={handleMenu}>Compétences</a>
+            <a href="#skills" onClick={handleMenu}>Technos</a>
         </li>
         <li className={`${styles.listItem} ${styles.navText}`}>
             <a href="#contact" onClick={handleMenu}>Contact</a>

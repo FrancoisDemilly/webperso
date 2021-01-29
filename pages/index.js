@@ -11,7 +11,7 @@ import SkillsStyles from '../styles/Skills.module.css'
 import ContactStyles from '../styles/Contact.module.css'
 
 import Image from 'next/image'
-import {useState, useLayoutEffect, useRef} from "react"
+import {useState, useEffect, useRef} from "react"
 
 
 
@@ -31,44 +31,41 @@ export default function Home() {
 
 
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const topPos = elt => elt.getBoundingClientRect().top
-    const bottomPos = elt => elt.getBoundingClientRect().bottom
-    const conPos = topPos(contact.current) - ((topPos(contact.current) - bottomPos(contact.current)) / 3)
-    const gitPos = topPos(github.current) - ((topPos(github.current) - bottomPos(github.current)) / 3)
-    const recPos = topPos(recipe.current) - ((topPos(recipe.current) - bottomPos(recipe.current)) / 3)
-    const calcPos = topPos(calculator.current) - ((topPos(calculator.current) - bottomPos(calculator.current)) / 3)
-    const simPos = topPos(simon.current) - ((topPos(simon.current) - bottomPos(simon.current)) / 3)
-    const ticPos = topPos(tictactoe.current) - ((topPos(tictactoe.current) - bottomPos(tictactoe.current)) / 3)
-    const pomPos = topPos(pomodoro.current) - ((topPos(pomodoro.current) - bottomPos(pomodoro.current)) / 3)
+    const contPos = topPos(contact.current)
+    const gitPos = topPos(github.current)
+    const recPos = topPos(recipe.current)
+    const calcPos = topPos(calculator.current)
+    const simPos = topPos(simon.current)
+    const ticPos = topPos(tictactoe.current)
+    const pomPos = topPos(pomodoro.current)
 
 
     const onScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight
-    
-      if(conPos < scrollPos) {
+      if(contPos < scrollPos) {
         doShow(state => ({...state, contDiv: true}))
       }
-      if ( gitPos < scrollPos) {
+      if (gitPos < scrollPos) {
         doShow(state => ({...state, gitDiv: true}))
       }
-      if ( recPos < scrollPos) {
+      if (recPos < scrollPos) {
         doShow(state => ({...state, recDiv: true}))
       }
-      if ( calcPos < scrollPos) {
+      if (calcPos < scrollPos) {
         doShow(state => ({...state, calcDiv: true}))
       }
-      if ( simPos < scrollPos) {
+      if (simPos < scrollPos) {
         doShow(state => ({...state, simDiv: true}))
       }
-      if ( ticPos < scrollPos) {
+      if (ticPos < scrollPos) {
         doShow(state => ({...state, ticDiv: true}))
       }
-      if ( pomPos < scrollPos) {
+      if (pomPos < scrollPos) {
         doShow(state => ({...state, pomDiv: true}))
       }
     }
-
     window.addEventListener("scroll", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
@@ -80,33 +77,33 @@ export default function Home() {
   }, [])
 
 
-  let animeCont = "" /*fom right to left*/
-    show.contDiv ?  animeCont = {transform : 'translate(0%)', transition: 'all, 0.1s, ease in'}  
-    : animeCont = {transform : 'translate(-100%)', transition: 'all, 1s, ease in'}
+  let animeCont = "" 
+    show.contDiv ?  animeCont = {transform : 'translate(0%)', transition: 'all, 1s, ease in'}  
+    : animeCont = {transform : 'translate(120%)', transition: 'all, 1s, ease in'}
 
-    let animeGit = "" 
+    let animeGit = "" /*fom right to left*/
     show.gitDiv ?  animeGit = {transform : 'translate(0%)', transition: 'all, 1s, ease in'}  
-    : animeGit = {transform : 'translate(100%)', transition: 'all, 1s, ease in'}
+    : animeGit = {transform : 'translate(-120%)', transition: 'all, 1s, ease in'}
 
-    let animeRec = "" /*fom right to left*/
+    let animeRec = "" 
     show.recDiv ?  animeRec = {transform : 'translate(0%)', transition: 'all, 1s, ease in'}  
-    : animeRec = {transform : 'translate(-100%)', transition: 'all, 1s, ease in'}
+    : animeRec = {transform : 'translate(120%)', transition: 'all, 1s, ease in'}
 
-    let animeCalc = ""
+    let animeCalc = "" /*fom right to left*/
     show.calcDiv ?  animeCalc = {transform : 'translate(0%)', transition: 'all, 1s, ease in'}  
-    : animeCalc = {transform : 'translate(100%)', transition: 'all, 1s, ease in'}
+    : animeCalc = {transform : 'translate(-120%)', transition: 'all, 1s, ease in'}
 
-    let animeSim = "" /*fom right to left*/
+    let animeSim = "" 
     show.simDiv ?  animeSim = {transform : 'translate(0%)', transition: 'all, 1s, ease in'}  
-    : animeSim = {transform : 'translate(-100%)', transition: 'all, 1s, ease in'}
+    : animeSim = {transform : 'translate(120%)', transition: 'all, 1s, ease in'}
 
-    let animeTic = "" 
+    let animeTic = "" /*fom right to left*/
     show.ticDiv ?  animeTic = {transform : 'translate(0%)', transition: 'all, 1s, ease in'}  
-    : animeTic = {transform : 'translate(100%)', transition: 'all, 1s, ease in'}
+    : animeTic = {transform : 'translate(-120%)', transition: 'all, 1s, ease in'}
 
-    let animePom = "" /*fom right to left*/
+    let animePom = "" 
     show.pomDiv ?  animePom = {transform : 'translate(0%)', transition: 'all, 1s, ease in'}  
-    : animePom = {transform : 'translate(-100%)', transition: 'all, 1s, ease in'}
+    : animePom = {transform : 'translate(120%)', transition: 'all, 1s, ease in'}
 
     /* end off project  section animation transition  slide in*/
 
@@ -325,7 +322,7 @@ export default function Home() {
     </div>
     {/************ Skills *********** */}
     <div id="skills" className={`${SkillsStyles.container}`} >
-    <h3 className={`${SkillsStyles.title}`} >Skills</h3>
+    <h3 className={`${SkillsStyles.title}`} >Technos</h3>
       <div className={`${SkillsStyles.wrapper}`}>
         <div className={`${SkillsStyles.itemWrapper}`}>
           <Image src="/icon/html5.svg" width={72} height={72}/>
