@@ -148,8 +148,9 @@ export default function Home() {
           height={305} />
       </div>
     </div>
+    
       {/* *********** Projects *********** */}
-    <div id="projects" className={`${ProjectsStyles.container}`}>
+    <div /*id="projects"*/ className={`${ProjectsStyles.container}`}>
       <h3 className={`${ProjectsStyles.title}`}>Projets</h3>
       {/*Contact Keeper*/}
       <div className={`${ProjectsStyles.project}`} ref={contact} style={animeCont}> 
